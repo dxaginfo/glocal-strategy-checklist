@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Glocal Strategy Illustration</title>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#3498DB" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="50%"></stop>
+            <stop stop-color="#E74C3C" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="200" cy="200" r="180"></circle>
+        <filter x="-8.3%" y="-8.3%" width="116.7%" height="116.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Glocal-Illustration" transform="translate(200.000000, 0.000000)">
+            <g id="World">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+            
+            <!-- Grid lines -->
+            <g id="Grid" stroke="#FFFFFF" stroke-width="1" opacity="0.5">
+                <circle cx="200" cy="200" r="140"></circle>
+                <circle cx="200" cy="200" r="100"></circle>
+                <circle cx="200" cy="200" r="60"></circle>
+                <line x1="200" y1="20" x2="200" y2="380" stroke-dasharray="5,5"></line>
+                <line x1="20" y1="200" x2="380" y2="200" stroke-dasharray="5,5"></line>
+            </g>
+            
+            <!-- Global Symbol (Left) -->
+            <g id="Global" transform="translate(80.000000, 150.000000)">
+                <circle cx="50" cy="50" r="40" fill="#3498DB"></circle>
+                <path d="M50,10 C72.09139,10 90,27.90861 90,50 C90,72.09139 72.09139,90 50,90 C27.90861,90 10,72.09139 10,50 C10,27.90861 27.90861,10 50,10 Z M50,15 C30.67033,15 15,30.67033 15,50 C15,69.32967 30.67033,85 50,85 C69.32967,85 85,69.32967 85,50 C85,30.67033 69.32967,15 50,15 Z" fill="#FFFFFF"></path>
+                <path d="M50,15 C53.9556,15 57.7556,15.65413 61.3192,16.88439 L61.3192,83.11561 C57.7556,84.34587 53.9556,85 50,85 C46.0444,85 42.2444,84.34587 38.6808,83.11561 L38.6808,16.88439 C42.2444,15.65413 46.0444,15 50,15 Z" fill="#FFFFFF" opacity="0.5"></path>
+                <path d="M23.2233,23.2233 C26.5623,19.8843 30.4587,17.1869 34.7746,15.293 L34.7746,84.707 C30.4587,82.8131 26.5623,80.1157 23.2233,76.7767 C19.8843,73.4377 17.1869,69.5413 15.293,65.2254 L84.707,65.2254 C82.8131,69.5413 80.1157,73.4377 76.7767,76.7767 C73.4377,80.1157 69.5413,82.8131 65.2254,84.707 L65.2254,15.293 C69.5413,17.1869 73.4377,19.8843 76.7767,23.2233 C80.1157,26.5623 82.8131,30.4587 84.707,34.7746 L15.293,34.7746 C17.1869,30.4587 19.8843,26.5623 23.2233,23.2233 Z" fill="#FFFFFF" opacity="0.5"></path>
+                <text x="50" y="110" text-anchor="middle" fill="#3498DB" font-size="24" font-weight="bold">GLOBAL</text>
+            </g>
+            
+            <!-- Local Symbol (Right) -->
+            <g id="Local" transform="translate(270.000000, 150.000000)">
+                <polygon points="50,10 90,50 50,90 10,50" fill="#E74C3C"></polygon>
+                <text x="50" y="110" text-anchor="middle" fill="#E74C3C" font-size="24" font-weight="bold">LOCAL</text>
+            </g>
+            
+            <!-- Balance Indicator -->
+            <g id="Indicator" transform="translate(180.000000, 180.000000)">
+                <circle cx="20" cy="20" r="20" fill="#FFFFFF" stroke="#333333" stroke-width="3"></circle>
+                <text x="20" y="26" text-anchor="middle" fill="#333333" font-size="24" font-weight="bold">⚖️</text>
+            </g>
+        </g>
+    </g>
+</svg>
