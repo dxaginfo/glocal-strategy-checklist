@@ -1,0 +1,214 @@
+/* Main Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Screen Management */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Card and Form Styling */
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.card-body {
+    border-radius: 10px;
+}
+
+.form-control, .form-select, .btn {
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    border-color: #0d6efd;
+}
+
+/* Question Styling */
+.question-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.question-text {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.question-options label {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.question-options label:hover {
+    background-color: #e9ecef;
+}
+
+.question-options input[type="radio"]:checked + label {
+    background-color: #cfe2ff;
+    border-color: #0d6efd;
+}
+
+.question-options input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Balance Meter Styling */
+.balance-meter-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.balance-meter {
+    position: relative;
+    width: 80%;
+    height: 60px;
+    background: linear-gradient(to right, #3498db, #e9ecef, #e74c3c);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.balance-indicator {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 3px solid #333;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    left: calc(50% - 15px); /* Default to center */
+}
+
+.balance-label {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    line-height: 1.2;
+    font-size: 0.85rem;
+    z-index: 2;
+}
+
+.balance-label.left {
+    text-align: left;
+}
+
+.balance-label.right {
+    text-align: right;
+}
+
+/* Section Scores Styling */
+.section-score {
+    margin-bottom: 15px;
+}
+
+.section-score-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.section-score-bar {
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.section-score-indicator {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.section-score-fill {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #3498db, #e9ecef, #e74c3c);
+    border-radius: 10px;
+}
+
+/* Recommendations Styling */
+.recommendation-card {
+    border-left: 4px solid #0d6efd;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.recommendation-card.global {
+    border-left-color: #3498db;
+}
+
+.recommendation-card.local {
+    border-left-color: #e74c3c;
+}
+
+.recommendation-card.balanced {
+    border-left-color: #2ecc71;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .balance-meter {
+        width: 100%;
+    }
+    
+    .balance-label {
+        font-size: 0.7rem;
+    }
+}
+
+/* Animation */
+@keyframes pulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+        box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.7);
+    }
+    
+    70% {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 0 0 10px rgba(13, 110, 253, 0);
+    }
+    
+    100% {
+        transform: translateY(-50%) scale(1);
+        box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
+    }
+}
+
+.balance-indicator.pulse {
+    animation: pulse 1.5s infinite;
+}
